@@ -1,0 +1,69 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#heading{
+    color: white;
+}
+#eye{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#eye-boundary{
+    background-color: white;
+    aspect-ratio: 1/1;
+    width: 200px;
+    border-radius: 150px 0;
+    transform: rotate(45deg);
+    box-shadow: 10px 10px gray;
+}
+#eyeball{
+    background-color: /*hsla(0, 34%, 39%, 1);*/hsl(241, 86%, 46%);
+    width: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 150px;
+    position: absolute;
+}
+#inner-eyeball{
+    position: absolute;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    border-color: black;
+    background-image: radial-gradient(circle, rgb(24, 24, 187),rgb(5, 5, 70));
+}
+#white-spot{
+    position: absolute;
+    width: 15px;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    background-color: azure;
+    transform: translate(8px,-20px);
+}
+#eye-lid{
+    position: relative;
+    background-color: black;
+    aspect-ratio: 1/1;
+    width: 210px;
+    border-radius: 150px 0;
+    transform: rotate(45deg);
+    animation: close 5000ms infinite;
+    z-index: 1;
+}
+@keyframes close {
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: 200px;
+    }
+    100%
+    {
+        top: 0px;
+    }
+}
